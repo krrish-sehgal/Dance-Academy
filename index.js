@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const app = express();
 const path = require('path');
 
-const port = process.env.PORT || 8080;
+const port = 8080;
 const hostname ='127.0.0.1';
 
 // EXPRESS SPECIFIC STUFF
@@ -16,7 +16,15 @@ app.set('view engine', 'pug')  // Set the template engine as pug
 app.set('views', path.join(__dirname, 'views'))  // Setting the path to the views directory 
 
 // DATABASE CONNECTION
-mongoose.connect('mongodb://localhost/DanceContactUs',{useNewUrlParser: true,useUnifiedTopology: true});
+// mongoose.connect('mongodb://localhost/DanceContactUs',{useNewUrlParser: true,useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost/DanceContactUs', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   serverSelectionTimeoutMS: 5000, // Increase this value if needed
+//   autoReconnect: true,
+//   reconnectTries: Number.MAX_VALUE,
+//   reconnectInterval: 1000, // Interval between retries in milliseconds
+});
 
 // CREATING A SCHEMA AND MODELLING IT
 const contactSchema = new mongoose.Schema({
