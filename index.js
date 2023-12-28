@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const app = express();
 const path = require('path');
 
-const port = 8080;
+const PORT = process.env.PORT || 3000;
 const hostname ='127.0.0.1';
 
 // EXPRESS SPECIFIC STUFF
