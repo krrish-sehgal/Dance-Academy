@@ -1,0 +1,21 @@
+extends 0_base.pug
+
+block scripts 
+    script 
+        include ../static/script.js
+block style    
+    style   
+        include ../static/homeStyles.css
+        include ../static/contactStyles.css
+block content 
+    .form 
+        #heading
+            h2 Contact Us
+        #content
+            form(action="/contact" method = 'post')
+                input(type="text" name="name" placeholder="Enter your name")
+                input(type="number" name="phone" placeholder='Enter your mobile number')
+                input(type="text" name="email" placeholder='Enter your Email Address')
+                input(type="text" name="address" placeholder='Enter your Residential Address')
+                input(type="text" name="age" placeholder='Enter your Age')
+                button(type="submit" name='Submit') Submit

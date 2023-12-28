@@ -1,0 +1,38 @@
+.form{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+form{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    height:82.5vh;
+}
+input{
+    width:800px;
+    height:100px;
+    padding:0px 15px;
+    margin:20px 0px;
+    outline:none;
+    border-radius: 10px;
+    border:2px solid black;
+    font-size:15px;
+}
+button{
+    height:50px;
+    width:100px;
+    color:white;
+    background-color: rgba(255, 85, 85, 0.9);
+    border:2px solid black;
+    padding:5px 2px;
+    margin :2px 2px;
+    border-radius: 30px;
+    font-size: 13px;
+}
+button:hover{
+    cursor: pointer;
+    color:black;
+}

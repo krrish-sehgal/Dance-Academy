@@ -1,0 +1,53 @@
+//-i am filling the base.pug templates using "extends" and putting values in its block
+extends 0_base.pug    
+
+block scripts 
+    script 
+        include ../static/script.js
+
+block style    
+    style   
+        include ../static/homeStyles.css
+
+block content 
+    //- Intro Section
+    section#introSection
+        div.main Welcome to Krrish's Dance Academy
+        div.small Eat Sleep Dance Repeat
+
+    //- Mission Section
+    h3 Our mission
+
+    section#missionSection
+        div.boxGrid#box-1 
+            h4 Dance perfection
+            div.bottom
+                div.image#img1
+                    img(src='../static/img/img1.png')
+                p This is the best dance academy in the universe
+        div.boxGrid#box-2 
+            h4 Dance the way you like
+            div.bottom#img2
+                div.image
+                    img(src='../static/img/img2.png')
+                p This is the best dance academy in the universe
+        div.boxGrid#box-3 
+            h4 Expert Teaching
+            div.bottom
+                div.image#img3
+                    img(src='../static/img/img3.png')
+                p This is the best dance academy in the universe
+    //-Sponsors Section
+    section#sponsorSection
+        h3 Our Sponsors
+        .sponsor 
+            div#sponsor1    
+                img(src='../static/img/abcd.png')
+            div#sponsor2
+                img(src='../static/img/apple.png')
+            div#sponsor3
+                img(src='../static/img/skype.png')
+            div#sponsor4
+                img(src='../static/img/microsoft.png')
+
+
