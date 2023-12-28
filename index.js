@@ -58,3 +58,6 @@ app.listen(port, ()=> {
     console.log(`The application started succesfully at http://${hostname}:${port}/`);
     
 })
+
+// EXPOSRTING EXPRESS API
+module.exports = app;
