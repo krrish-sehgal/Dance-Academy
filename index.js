@@ -16,7 +16,7 @@ app.set('view engine', 'pug')  // Set the template engine as pug
 app.set('views', path.join(__dirname, 'views'))  // Setting the path to the views directory 
 
 // DATABASE CONNECTION
-mongoose.connect('mongodb://localhost/DanceContactUs',{useNewUrlParser: true,useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/DanceContactUs',{useNewUrlParser: true,useUnifiedTopology: true});
 
 // CREATING A SCHEMA AND MODELLING IT
 const contactSchema = new mongoose.Schema({
